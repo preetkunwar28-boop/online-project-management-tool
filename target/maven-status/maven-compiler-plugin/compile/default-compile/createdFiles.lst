@@ -1,0 +1,8 @@
+com/projectmanagement/dao/TaskDAO.class
+com/projectmanagement/model/Task.class
+com/projectmanagement/model/Project.class
+com/projectmanagement/servlet/RegisterServlet.class
+com/projectmanagement/servlet/LoginServlet.class
+com/projectmanagement/model/User.class
+com/projectmanagement/util/DBConnection.class
+com/projectmanagement/dao/UserDAO.class
