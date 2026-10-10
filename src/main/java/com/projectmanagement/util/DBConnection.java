@@ -1,3 +1,4 @@
+
 package com.projectmanagement.util;
 
 import java.sql.Connection;
@@ -6,13 +7,15 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-    private static final String URL =
-            "jdbc:mysql://localhost:3306/project_management";
-
-    private static final String USER = "root";
-    private static final String PASSWORD = "";
-
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(URL, USER, PASSWORD);
+        String host = System.getenv("MYSQLHOST");
+        String port = System.getenv("MYSQLPORT");
+        String database = System.getenv("MYSQLDATABASE");
+        String user = System.getenv("MYSQLUSER");
+        String password = System.getenv("MYSQLPASSWORD");
+
+        String url = "jdbc:mysql://" + host + ":" + port + "/" + database;
+
+        return DriverManager.getConnection(url, user, password);
     }
 }
